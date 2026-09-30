@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מתנדבי פאראגרוטראלי 2026 - מצטרפים למסע!</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Rubik', 'sans-serif'],
+                    },
+                    colors: {
+                        'pastel-bg': '#FDFBF7', /* Very soft warm off-white */
+                        'pastel-card': '#FFFFFF',
+                        'pastel-blue': '#B4D4FF', /* Soft baby blue */
+                        'pastel-peach': '#FFD6BA', /* Gentle peach */
+                        'pastel-pink': '#FFC4D9', /* Soft pink */
+                        'pastel-mint': '#C2F0E6', /* Soft mint green */
+                        'text-dark': '#2D3748', /* Dark slate for high readability */
+                        'text-light': '#718096', /* Medium gray for secondary text */
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0,0,0,0.03)',
+                        'float': '0 10px 30px -10px rgba(180, 212, 255, 0.4)',
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in-up': 'fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        'fade-in-up': {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        body {
+            background-color: #FDFBF7;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 1);
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FDFBF7; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #B4D4FF; }
+    </style>
+</head>
+<body class="text-text-dark antialiased selection:bg-pastel-peach selection:text-text-dark">
+
+    <header class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        
+        <!-- Animated Pastel Blobs Background -->
+        <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-[10%] left-[15%] w-72 h-72 bg-pastel-blue rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob"></div>
+            <div class="absolute top-[20%] right-[15%] w-80 h-80 bg-pastel-peach rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-[10%] left-[40%] w-96 h-96 bg-pastel-pink rounded-full mix-blend-multiply filter blur-[80px] opacity-60 animate-blob animation-delay-4000"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            
+            <div class="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-white/60 backdrop-blur-md border border-white shadow-sm text-text-dark text-sm font-semibold tracking-wide mb-8 animate-fade-in-up">
+                <span class="w-2.5 h-2.5 rounded-full bg-pastel-peach animate-pulse"></span>
+                אירוע שיא • 30.10.2026
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 text-text-dark tracking-tight animate-fade-in-up delay-100">
+                מתנדבי <span class="relative inline-block">
+                    <span class="relative z-10">פאראגרוטראלי</span>
+                    <!-- Text highlight effect -->
+                    <svg class="absolute w-full h-4 -bottom-1 left-0 -z-10 text-pastel-peach opacity-70" viewBox="0 0 100 10" preserveAspectRatio="none">
+                        <path d="M0 5 Q 50 10 100 5 L 100 10 L 0 10 Z" fill="currentColor"></path>
+                    </svg>
+                </span> 11
+            </h1>
+            
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto mb-12 leading-relaxed text-text-light opacity-0 animate-fade-in-up delay-200">
+                הצטרפו אלינו ליום שכולו חיוכים, אדרנלין והתרגשות. 
+                <br class="hidden md:block">
+                בואו להיות חלק מצוות המתנדבים שגורם לקסם הזה לקרות!
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 opacity-0 animate-fade-in-up delay-300">
+                <a href="#volunteer-groups" class="px-8 py-4 bg-text-dark text-white font-bold rounded-2xl transition-all hover:shadow-float hover:-translate-y-1 flex items-center justify-center gap-2 text-lg">
+                    <i class="fa-brands fa-whatsapp text-xl text-pastel-mint"></i>
+                    הצטרפו להתנדבות
+                </a>
+                <a href="#about" class="px-8 py-4 glass-card text-text-dark font-semibold rounded-2xl hover:bg-white transition-all flex items-center justify-center gap-2 text-lg shadow-sm">
+                    <i class="fa-solid fa-play text-sm text-pastel-blue"></i>
+                    צפו בסרטון
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 relative z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16 max-w-7xl mx-auto">
+                
+                <!-- Video Container -->
+                <div class="w-full lg:w-1/2 order-2 lg:order-1 relative group">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-pastel-blue to-pastel-peach rounded-[2.5rem] opacity-40 blur-2xl transition duration-500 group-hover:opacity-60 group-hover:scale-105"></div>
+                    <div class="relative bg-white p-3 rounded-[2rem] shadow-soft">
+                        <div class="aspect-video rounded-[1.5rem] overflow-hidden relative bg-gray-50 border border-gray-100">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full"
+                                src="https://www.youtube.com/embed/G5jTcE_REDk?si=4rpFemqealujOy6M" 
+                                title="הסבר על הפאראגרוטראלי" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 glass-card p-4 rounded-2xl shadow-lg flex items-center gap-3 animate-blob">
+                        <div class="bg-pastel-pink text-text-dark p-3 rounded-xl">
+                            <i class="fa-solid fa-heart text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-text-light font-medium uppercase tracking-wider">פרויקט קהילתי</p>
+                            <p class="font-bold text-text-dark">מכל הלב</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 order-1 lg:order-2 space-y-8">
+                    <div>
+                        <span class="inline-block py-1 px-3 rounded-full bg-pastel-blue/30 text-text-dark font-bold text-xs uppercase tracking-wider mb-4">קצת על המסע</span>
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-text-dark leading-tight">
+                            מה זה בעצם <br>
+                            <span class="relative">
+                                פאראגרוטראלי?
+                                <svg class="absolute w-full h-3 -bottom-1 left-0 -z-10 text-pastel-mint opacity-80" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <path d="M0 5 Q 50 10 100 5 L 100 10 L 0 10 Z" fill="currentColor"></path>
+                                </svg>
+                            </span>
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6 text-lg text-text-light relative pl-6 border-r-4 border-pastel-peach rounded-r">
+                        <p class="leading-relaxed">
+                            <strong class="text-text-dark font-semibold">הפאראגרוטראלי</strong> הוא הרבה יותר מאירוע מוטורי. זהו פרויקט קהילתי מרגש שבו מתנדבים מכל קצוות הארץ חוברים יחד כדי לבנות ולהתאים "גרוטאות" לרכבי שטח ייחודיים עבור ילדים ואנשים עם צרכים מיוחדים.
+                        </p>
+                        <p class="leading-relaxed">
+                            ביום האירוע, אנו חוגגים את היצירה, את הקהילה ואת הניצחון האישי של כל משתתף ב"סיבוב ניצחון" מרגש, הפנינג ענק והמון שמחה. 
+                            <span class="bg-pastel-peach/30 text-text-dark font-medium px-2 py-0.5 rounded">התפקיד שלכם כמתנדבים הוא קריטי</span> כדי לעטוף את המשתתפים באהבה ולדאוג שהאירוע יתקתק בצורה מושלמת.
+                        </p>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <a href="https://grutarally.co.il/%D7%A4%D7%90%D7%A8%D7%90%D7%92%D7%A8%D7%95%D7%98%D7%A8%D7%90%D7%9C%D7%99/" target="_blank" class="group inline-flex items-center gap-3 bg-white text-text-dark font-bold py-3.5 px-6 rounded-2xl shadow-sm hover:shadow-md border border-gray-100 transition-all hover:-translate-y-1">
+                            <span class="bg-pastel-bg p-2 rounded-xl group-hover:bg-pastel-blue transition-colors">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                            </span>
+                            בקרו באתר הרשמי 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative z-10">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-dark mb-4">מתי ואיפה נפגשים?</h2>
+                <p class="text-text-light text-lg">כל הפרטים שצריך לדעת לקראת האירוע הגדול</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                
+                <!-- Main Info Cards -->
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Date Card -->
+                    <div class="bg-white rounded-[2rem] p-8 shadow-soft border border-gray-50 flex flex-col justify-center relative overflow-hidden group hover:-translate-y-1 transition-transform">
+                        <div class="absolute -left-4 -top-4 w-32 h-32 bg-pastel-pink/20 rounded-full blur-2xl group-hover:bg-pastel-pink/40 transition-colors"></div>
+                        <div class="bg-pastel-pink/30 w-14 h-14 rounded-2xl flex items-center justify-center text-text-dark mb-6 relative z-10">
+                            <i class="fa-regular fa-calendar-check text-2xl"></i>
+                        </div>
+                        <h4 class="text-text-light font-medium mb-1">תאריך האירוע</h4>
+                        <p class="text-3xl font-bold text-text-dark">יום שישי</p>
+                        <p class="text-xl text-text-dark/80 font-medium mt-1">30/10/2026</p>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="bg-white rounded-[2rem] p-8 shadow-soft border border-gray-50 flex flex-col justify-center relative overflow-hidden group hover:-translate-y-1 transition-transform">
+                        <div class="absolute -left-4 -top-4 w-32 h-32 bg-pastel-blue/20 rounded-full blur-2xl group-hover:bg-pastel-blue/40 transition-colors"></div>
+                        <div class="bg-pastel-blue/40 w-14 h-14 rounded-2xl flex items-center justify-center text-text-dark mb-6 relative z-10">
+                            <i class="fa-solid fa-map-location-dot text-2xl"></i>
+                        </div>
+                        <h4 class="text-text-light font-medium mb-1">מיקום האירוע</h4>
+                        <p class="text-2xl font-bold text-text-dark">בית ספר צפית</p>
+                        <p class="text-lg text-text-light mt-1">קיבוץ כפר מנחם <span class="text-sm">• מ.א יואב</span></p>
+                    </div>
+
+                    <!-- Schedule Card (Light Theme) -->
+                    <div class="md:col-span-2 bg-white rounded-[2rem] p-8 md:p-10 shadow-soft border border-gray-50 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white via-white to-pastel-mint/10 z-0"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-8">
+                                <div class="bg-pastel-mint w-10 h-10 rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-clock text-text-dark"></i>
+                                </div>
+                                <h4 class="text-2xl font-bold text-text-dark">לוח זמנים מתוכנן</h4>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-pastel-bg p-5 rounded-2xl text-center flex flex-col items-center border border-gray-100">
+                                    <span class="text-text-dark font-mono text-2xl font-bold mb-1">08:00</span>
+                                    <span class="text-sm font-medium text-text-light">הגעת משפחות</span>
+                                </div>
+                                <div class="bg-pastel-bg p-5 rounded-2xl text-center flex flex-col items-center border border-gray-100">
+                                    <span class="text-text-dark font-mono text-2xl font-bold mb-1">09:00</span>
+                                    <span class="text-sm font-medium text-text-light">נוסעים</span>
+                                </div>
+                                <div class="bg-pastel-peach border border-white p-5 rounded-2xl text-center flex flex-col items-center transform scale-105 shadow-md relative overflow-hidden">
+                                    <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+                                    <span class="text-text-dark font-mono text-2xl font-bold mb-1 relative z-10">11:30</span>
+                                    <span class="text-sm font-bold text-text-dark relative z-10">סיבוב ניצחון! 🏆</span>
+                                </div>
+                                <div class="bg-pastel-bg p-5 rounded-2xl text-center flex flex-col items-center border border-gray-100">
+                                    <span class="text-text-dark font-mono text-2xl font-bold mb-1">12:00</span>
+                                    <span class="text-sm font-medium text-text-light">מסיבה והפנינג</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-6 border-t border-gray-100 text-text-light text-sm flex items-center gap-3 justify-center bg-white/50 rounded-xl">
+                                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-pastel-pink/30 text-text-dark">
+                                    <i class="fa-solid fa-pizza-slice"></i>
+                                </span>
+                                <span class="font-medium">יוגש כיבוד קל ויהיה הפנינג ענק לכל המשפחה!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster Image Card -->
+                <div class="lg:col-span-4 rounded-[2rem] overflow-hidden shadow-soft border border-gray-50 bg-white relative h-full min-h-[400px]">
+                    <div class="absolute inset-0 p-3">
+                         <div class="w-full h-full rounded-[1.5rem] overflow-hidden bg-gray-50 relative group">
+                            <img src="image_25d937.jpg" alt="פוסטר אירוע פאראגרוטראלי" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/400x800/fdfbf7/2d3748?text=Poster';">
+                         </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="volunteer-groups" class="py-24 relative z-10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-pastel-mint/30 text-text-dark px-4 py-2 rounded-full text-sm font-bold tracking-wide mb-4">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> תקשורת שוטפת
+                </div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-text-dark mb-4">בחרו את הקבוצה שלכם</h2>
+                <p class="text-text-light max-w-2xl mx-auto text-lg">
+                    הצטרפו לקבוצת הווטסאפ הרלוונטית למסגרת דרכה הגעתם להתנדב. דרך הקבוצה נשמור על קשר ונעדכן אתכם בכל הפרטים.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                
+                <!-- Group 1: Community -->
+                <a href="https://chat.whatsapp.com/D2BG0pyOOzXFj3sQfgiaIe" target="_blank" class="group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-float border border-gray-50 transition-all duration-300 transform hover:-translate-y-2 text-center flex flex-col items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-pastel-mint/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-20 h-20 bg-pastel-mint/30 text-text-dark rounded-full flex items-center justify-center mb-6 group-hover:bg-[#25D366] group-hover:text-white transition-colors duration-300 relative z-10">
+                        <i class="fa-solid fa-users text-3xl group-hover:hidden"></i>
+                        <i class="fa-brands fa-whatsapp text-4xl hidden group-hover:block animate-bounce"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-text-dark mb-2 relative z-10">מתנדבים קהילה</h3>
+                    <p class="text-text-light text-sm relative z-10 leading-relaxed">למתנדבים המגיעים מהקהילה הרחבה באזור</p>
+                    <div class="mt-6 text-[#25D366] font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 relative z-10 flex items-center gap-2">
+                        הצטרפו לקבוצה <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </a>
+
+                <!-- Group 2: Boarding School -->
+                <a href="https://chat.whatsapp.com/LVZDeSnEetiESRr3V2RK1z" target="_blank" class="group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-float border border-gray-50 transition-all duration-300 transform hover:-translate-y-2 text-center flex flex-col items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-pastel-mint/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-20 h-20 bg-pastel-peach/40 text-text-dark rounded-full flex items-center justify-center mb-6 group-hover:bg-[#25D366] group-hover:text-white transition-colors duration-300 relative z-10">
+                        <i class="fa-solid fa-house-chimney-user text-3xl group-hover:hidden"></i>
+                        <i class="fa-brands fa-whatsapp text-4xl hidden group-hover:block animate-bounce"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-text-dark mb-2 relative z-10">צוות פנימייה</h3>
+                    <p class="text-text-light text-sm relative z-10 leading-relaxed">לצוות וחניכי הפנימייה המשתתפים באירוע</p>
+                    <div class="mt-6 text-[#25D366] font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 relative z-10 flex items-center gap-2">
+                        הצטרפו לקבוצה <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </a>
+
+                <!-- Group 3: Tzafit Team -->
+                <a href="https://chat.whatsapp.com/DCTJVWKPs069JkXjBY1xQH" target="_blank" class="group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-float border border-gray-50 transition-all duration-300 transform hover:-translate-y-2 text-center flex flex-col items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-pastel-mint/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-20 h-20 bg-pastel-blue/40 text-text-dark rounded-full flex items-center justify-center mb-6 group-hover:bg-[#25D366] group-hover:text-white transition-colors duration-300 relative z-10">
+                        <i class="fa-solid fa-school text-3xl group-hover:hidden"></i>
+                        <i class="fa-brands fa-whatsapp text-4xl hidden group-hover:block animate-bounce"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-text-dark mb-2 relative z-10">צוות צפית</h3>
+                    <p class="text-text-light text-sm relative z-10 leading-relaxed">לצוות ההוראה, למורים ולמתנדבי בית ספר צפית</p>
+                    <div class="mt-6 text-[#25D366] font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 relative z-10 flex items-center gap-2">
+                        הצטרפו לקבוצה <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </a>
+
+                <!-- Group 4: HaShomer HaTzair -->
+                <a href="https://chat.whatsapp.com/GTSvBGD6VvG5qiXqrdqhdi" target="_blank" class="group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-float border border-gray-50 transition-all duration-300 transform hover:-translate-y-2 text-center flex flex-col items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-pastel-mint/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-20 h-20 bg-pastel-pink/40 text-text-dark rounded-full flex items-center justify-center mb-6 group-hover:bg-[#25D366] group-hover:text-white transition-colors duration-300 relative z-10">
+                        <i class="fa-solid fa-campground text-3xl group-hover:hidden"></i>
+                        <i class="fa-brands fa-whatsapp text-4xl hidden group-hover:block animate-bounce"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-text-dark mb-2 relative z-10">השומר הצעיר</h3>
+                    <p class="text-text-light text-sm relative z-10 leading-relaxed">לקומונרים, פעילים ובוגרי תנועת השומר הצעיר</p>
+                    <div class="mt-6 text-[#25D366] font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 relative z-10 flex items-center gap-2">
+                        הצטרפו לקבוצה <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white/80 backdrop-blur-md border-t border-gray-100 py-12 relative z-10 mt-10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-text-dark mb-2">נתראה בפאראגרוטראלי 2026!</h2>
+            <p class="mb-10 text-text-light">תודה ענקית על ההתנדבות, הרצון הטוב והנכונות לעזור.</p>
+            
+            <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-2 bg-pastel-bg px-6 py-3 rounded-2xl border border-gray-100 shadow-sm">
+                <span class="text-sm text-text-light">האתר הוכן באהבה על ידי</span>
+                <a href="https://avivdigitalsolutions.vercel.app/" target="_blank" class="flex items-center gap-2 text-text-dark hover:text-pastel-blue transition-colors font-semibold group">
+                    <span class="bg-white p-1.5 rounded-lg group-hover:bg-pastel-blue/20 transition-colors shadow-sm">
+                        <i class="fa-solid fa-code text-xs"></i>
+                    </span>
+                    Aviv Digital Solutions
+                </a>
+                <i class="fa-solid fa-heart text-pastel-pink text-sm animate-pulse mx-1"></i>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
